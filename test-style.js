@@ -13,7 +13,7 @@ this.style.main`
 		transform: translateX(0);
 	}
 
-	.elements-container {
+	& .elements-container {
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
