@@ -66,6 +66,29 @@
       ]
     },
     {
+      "begin": "(?i)(\\w+\\.style\\.\\w+)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.ts#template-substitution-element"
+        },
+        {
+          "include": "source.css"
+        },
+        {
+          "include": "inline.es6-htmlx#template"
+        },
+        {
+          "include": "string.quoted.other.template.js"
+        }
+      ]
+    },
+    {
       "begin": "(?i)(?<=\\s|\\,|\\=|\\:|\\(|\\$\\()\\s{0,}(((\\/\\*)|(\\/\\/))\\s?(css|inline-css)[ ]{0,1000}\\*?\\/?)[ ]{0,1000}$",
       "beginCaptures": {
         "1": {
