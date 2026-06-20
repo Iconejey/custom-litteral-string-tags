@@ -87,6 +87,26 @@
       ]
     },
     {
+      "begin": "(\\.render)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.method"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.ts#template-substitution-element"
+        },
+        {
+          "include": "text.html.basic"
+        },
+        {
+          "include": "inline.es6-htmlx#template"
+        }
+      ]
+    },
+    {
       "begin": "(\\${)",
       "end": "(})",
       "beginCaptures": {
